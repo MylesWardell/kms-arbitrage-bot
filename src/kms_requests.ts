@@ -1,5 +1,12 @@
 import { createHmac } from "node:crypto";
 import { env } from "./envs.ts";
+import {
+  Balance,
+  DepthResponse,
+  ExchangePairResponse,
+  OrderRequest,
+  OrderResponse,
+} from "./types.ts";
 
 const BASE_URL = "https://client-api.kinesis.money";
 
@@ -14,14 +21,14 @@ const authHeader = (
       "hex",
     ).toUpperCase();
 
-  const headers = {
-    "X-Nonce": nonce,
+  const headers = new Headers({
+    "X-Nonce": nonce.toString(),
     "X-API-key": env.KMS_API_PUBLIC_KEY,
     "X-Signature": xsig,
-  } as Record<string, string | number>;
+  });
 
   if (contentType !== "no") {
-    headers["Content-Type"] = "application/json";
+    headers.append("Content-Type", "application/json");
   }
 
   return headers;
@@ -31,48 +38,36 @@ const kmsFetch = async (
   url: string,
   options?: Omit<RequestInit, "body"> & { body?: Record<string, unknown> },
 ) => {
-  const { method = "GET", body = {} } = options ?? {};
+  const { method = "GET", body, ...rest } = options ?? {};
+  const bodyString = body ? JSON.stringify(body) : "";
   const headers = authHeader({
     method,
     url,
-    data: body ? JSON.stringify(body) : "",
+    data: bodyString,
   });
+
   const response = await fetch(`${BASE_URL}${url}`, {
     headers,
     method,
-    body,
-    ...options,
+    body: body ? bodyString : undefined,
+    ...rest,
   });
-  const data = await response.json();
-  return data;
-};
 
-interface ExchangePairResponse {
-  currencyPairId: string;
-  baseCurrency: string;
-  quoteCurrency: string;
-  baseDecimals: number;
-  quoteDecimals: number;
-}
+  try {
+    const data = await response.json();
+    return data;
+  } catch {
+    const text = await response.text();
+    console.error(text);
+    throw new Error(text);
+  }
+};
 
 export const getExchangePairsQuery = async (): Promise<
   ExchangePairResponse[]
 > => {
   return await kmsFetch("/v1/exchange/pairs");
 };
-
-interface Depth {
-  amount: number;
-  price: number;
-}
-
-interface DepthResponse {
-  currencyPairId: string;
-  depthItems: {
-    bid: Depth[];
-    ask: Depth[];
-  };
-}
 
 export const getExchangeDepthBySymbolQuery = async (
   symbolId: string,
@@ -81,29 +76,10 @@ export const getExchangeDepthBySymbolQuery = async (
 };
 
 export const getBalanceQuery = async (): Promise<
-  { available: number; allocatedOnExchange: number }
+  Balance
 > => {
   return await kmsFetch("/v1/exchange/holdings");
 };
-
-interface OrderRequest {
-  currencyPairId: string;
-  direction: "buy" | "sell";
-  orderType: "limit" | "market";
-  amount: number;
-  clientOrderId?: string;
-  limitPrice?: number;
-}
-
-interface OrderResponse {
-  id: string;
-  clientOrderId: string;
-  symbolId: string;
-  direction: "buy" | "sell";
-  amount: number;
-  limitPrice?: number;
-  createdAt: string;
-}
 
 export const placeOrderMutation = async (
   params: OrderRequest,
@@ -141,7 +117,6 @@ export const withdrawToMintMutation = async (params: {
       memo,
       currencyCode,
       amount: amount.toString(),
-      address: env.MINT_WALLET_ADDRESS,
     },
   });
 };
