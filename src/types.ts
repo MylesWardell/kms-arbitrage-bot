@@ -11,7 +11,6 @@ export interface OrderRequest {
   direction: "buy" | "sell";
   orderType: "limit" | "market";
   amount: number;
-  clientOrderId?: string;
   limitPrice?: number;
 }
 
@@ -30,14 +29,14 @@ export interface Depth {
   price: number;
 }
 
-export interface DepthItems {
+export interface OrderBook {
   bid: Depth[];
   ask: Depth[];
 }
 
 export interface DepthResponse {
   currencyPairId: SymbolId;
-  depthItems: DepthItems;
+  depthItems: OrderBook;
 }
 
 export type Balance = Record<CurrencyCode, BalanceValue>

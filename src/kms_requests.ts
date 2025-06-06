@@ -89,7 +89,6 @@ export const placeOrderMutation = async (
     direction,
     orderType,
     amount,
-    clientOrderId,
     limitPrice,
   } = params;
   return await kmsFetch("/v1/exchange/orders", {
@@ -99,7 +98,6 @@ export const placeOrderMutation = async (
       direction,
       orderType,
       amount,
-      clientOrderId,
       limitPrice,
     },
   });

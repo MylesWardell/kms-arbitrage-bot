@@ -1,6 +1,6 @@
-import { CurrencyCode, DepthItems } from "./types.ts";
+import { CurrencyCode, OrderBook } from "./types.ts";
 import { getQuoteBaseMap } from "./updater.ts";
-import { getKv, getKvNull } from "./kvStore.ts";
+import { getKv } from "./kvStore.ts";
 
 // Type definitions for market data and related structures
 export type Currency = CurrencyCode;
@@ -8,10 +8,7 @@ export type OrderBookEntry = {
   price: number;
   amount: number;
 };
-export interface OrderBook {
-  bid: OrderBookEntry[];
-  ask: OrderBookEntry[];
-};
+
 export type MarketData = [Currency, Currency, OrderBook];
 export interface ExchangeRate {
   fromCurrency: Currency;
@@ -47,7 +44,7 @@ async function convertToExchangeRates(): Promise<ExchangeRate[]> {
     }
 
     for (const baseCurrency of baseCurrencies) {
-      const depth = await getKv<DepthItems>([quoteCurrency, baseCurrency])
+      const depth = await getKv<OrderBook>([quoteCurrency, baseCurrency])
 
       if (!depth) {
         continue
@@ -220,7 +217,7 @@ function findArbitrageOpportunity(
       
       // Now trace the cycle
       const cycle: Currency[] = [];
-      let startCurrency = current;
+      const startCurrency = current;
       
       do {
         cycle.push(current);
