@@ -1,28 +1,27 @@
 import { createHmac } from "node:crypto";
-import { env } from "./envs.ts";
+import { env } from "../envs.ts";
 import {
   Balance,
   DepthResponse,
   ExchangePairResponse,
   OrderRequest,
   OrderResponse,
-} from "./types.ts";
+} from "../types.ts";
 
 const BASE_URL = "https://client-api.kinesis.money";
 
-const authHeader = (
+export const authHeader = (
   params: { method: string; url: string; data?: string; contentType?: string },
 ) => {
   const { method, url, data = "", contentType = "" } = params;
-  const nonce = Date.now();
+  const nonce = Date.now().toString();
   const message = nonce + method + url + data;
-  const xsig = createHmac("sha256", env.KMS_API_SECRET_KEY).update(message)
-    .digest(
-      "hex",
-    ).toUpperCase();
+  const xsig = createHmac("sha256", env.KMS_API_SECRET_KEY)
+    .update(message)
+    .digest("hex");
 
   const headers = new Headers({
-    "X-Nonce": nonce.toString(),
+    "X-Nonce": nonce,
     "X-API-key": env.KMS_API_PUBLIC_KEY,
     "X-Signature": xsig,
   });

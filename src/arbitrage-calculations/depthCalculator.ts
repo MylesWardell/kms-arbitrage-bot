@@ -1,4 +1,5 @@
-import { OrderBook } from "./types.ts";
+import { OrderBook } from "../types.ts";
+import { Decimal } from "decimal.js";
 
 /**
  * Calculates the average price for buying a specific amount of the base currency
@@ -7,35 +8,35 @@ import { OrderBook } from "./types.ts";
  * @param amount - The amount of base currency to buy (e.g., BTC amount for BTC_AUD)
  * @returns Object containing the average price and total cost
  */
-export function calculateBuyPrice(orderBook: OrderBook, amount: number): { 
-  averagePrice: number; 
-  totalCost: number;
+export function calculateBuyPrice(orderBook: OrderBook, amount: Decimal): { 
+  averagePrice: Decimal; 
+  totalCost: Decimal;
   filled: boolean;
 } {
   const asks = orderBook.ask;
 
-  let remainingAmount = amount;
-  let totalCost = 0;
+  let remainingAmount = new Decimal(amount);
+  let totalCost = new Decimal(0);
 
   // Go through the ask orders from lowest to highest price
   for (const ask of asks) {
-    const fillAmount = Math.min(remainingAmount, ask.amount);
-    const fillCost = fillAmount * ask.price;
-    
-    totalCost += fillCost;
-    remainingAmount -= fillAmount;
+    const fillAmount = Decimal(remainingAmount).lt(new Decimal(ask.amount)) ? remainingAmount : new Decimal(ask.amount);
+    const fillCost = fillAmount.times(ask.price);
+
+    totalCost = totalCost.plus(fillCost);
+    remainingAmount = remainingAmount.minus(fillAmount);
     
     // If we've filled the entire amount, we're done
-    if (remainingAmount <= 0.00000001) { // Using a small epsilon to account for floating-point precision
+    if (remainingAmount.lte(0.00000001)) { // Using a small epsilon to account for floating-point precision
       break;
     }
   }
   
   // Check if we could fill the entire order
-  const filled = remainingAmount <= 0.00000001;
+  const filled = remainingAmount.lte(0.00000001);
   
   // Calculate the average price
-  const averagePrice = amount > 0 ? totalCost / (amount - remainingAmount) : 0;
+  const averagePrice = amount.gt(0) ? totalCost.div(amount.minus(remainingAmount)) : new Decimal(0);
 
   return {
     averagePrice: averagePrice,
@@ -51,35 +52,35 @@ export function calculateBuyPrice(orderBook: OrderBook, amount: number): {
  * @param amount - The amount of base currency to sell (e.g., BTC amount for BTC_AUD)
  * @returns Object containing the average price and total proceeds
  */
-export function calculateSellPrice(orderBook: OrderBook, amount: number): {
-  averagePrice: number;
-  totalProceeds: number;
+export function calculateSellPrice(orderBook: OrderBook, amount: Decimal): {
+  averagePrice: Decimal;
+  totalProceeds: Decimal;
   filled: boolean;
 } {
   const bids = orderBook.bid;
 
-  let remainingAmount = amount;
-  let totalProceeds = 0;
+  let remainingAmount = new Decimal(amount);
+  let totalProceeds = new Decimal(0);
   
   // Go through the bid orders from highest to lowest price
   for (const bid of bids) {
-    const fillAmount = Math.min(remainingAmount, bid.amount);
-    const fillProceeds = fillAmount * bid.price;
+    const fillAmount = Decimal(remainingAmount).lt(new Decimal(bid.amount)) ? remainingAmount : new Decimal(bid.amount);
+    const fillProceeds = fillAmount.times(bid.price);
     
-    totalProceeds += fillProceeds;
-    remainingAmount -= fillAmount;
+    totalProceeds = totalProceeds.plus(fillProceeds);
+    remainingAmount = remainingAmount.minus(fillAmount);
 
     // If we've filled the entire amount, we're done
-    if (remainingAmount <= 0.00000001) { // Using a small epsilon to account for floating-point precision
+    if (remainingAmount.lte(0.00000001)) { // Using a small epsilon to account for floating-point precision
       break;
     }
   }
   
   // Check if we could fill the entire order
-  const filled = remainingAmount <= 0.00000001;
+  const filled = remainingAmount.lte(0.00000001);
   
   // Calculate the average price
-  const averagePrice = amount > 0 ? totalProceeds / (amount - remainingAmount) : 0;
+  const averagePrice = amount.gt(0) ? totalProceeds.div(amount.minus(remainingAmount)) : new Decimal(0);
 
   return {
     averagePrice: averagePrice,
@@ -95,9 +96,9 @@ export function calculateSellPrice(orderBook: OrderBook, amount: number): {
  * @param amount - The amount of base currency (positive for buy, negative for sell)
  * @returns Object containing the execution details
  */
-export function calculatePrice(params: {orderBook: OrderBook, amount: number, type: 'buy' | 'sell'}): {
-  averagePrice: number;
-  totalValue: number;
+export function calculatePrice(params: {orderBook: OrderBook, amount: Decimal, type: 'buy' | 'sell'}): {
+  averagePrice: Decimal;
+  totalValue: Decimal;
   filled: boolean;
   side: 'buy' | 'sell';
 } {

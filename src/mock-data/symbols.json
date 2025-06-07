@@ -1,0 +1,2936 @@
+[
+  {
+    "id": "KAU_USD",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 1,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.1
+  },
+  {
+    "id": "KAG_USD",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 2,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.1
+  },
+  {
+    "id": "BTC_USD",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 3,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_USD",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "ETH",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 4,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_USD",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 5,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KVT_USD",
+    "base": {
+      "code": "KVT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 6,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 100
+  },
+  {
+    "id": "BCH_USD",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 7,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_USD",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 8,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_USD",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 9,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_USD",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 10,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_USD",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 12,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_USD",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 13,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_USD",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 14,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USD1_USD",
+    "base": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD",
+      "type": "fiat"
+    },
+    "fee": "USD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 18,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAU_EUR",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 19,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.1
+  },
+  {
+    "id": "KAG_EUR",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 20,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.1
+  },
+  {
+    "id": "BTC_EUR",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 21,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_EUR",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "ETH",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 22,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_KAU",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 24,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_KAU",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 25,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_GBP",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 26,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.3
+  },
+  {
+    "id": "KVT_KAU",
+    "base": {
+      "code": "KVT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 27,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0
+  },
+  {
+    "id": "KAG_GBP",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 28,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.3
+  },
+  {
+    "id": "KAU_KAG",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 29,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.3
+  },
+  {
+    "id": "BTC_KAG",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 30,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_GBP",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 31,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_KAG",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 32,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KVT_KAG",
+    "base": {
+      "code": "KVT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 34,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0
+  },
+  {
+    "id": "ETH_BTC",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "fee": "BTC",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 35,
+    "baseDecimals": 6,
+    "quoteDecimals": 8,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_GBP",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 38,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_EUR",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 39,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_GBP",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 40,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_AUD",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 41,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_CAD",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 42,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDT_CHF",
+    "base": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 43,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_USDT",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 44,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAG_USDT",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 45,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_USDT",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "fee": "USDT",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 46,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_USDT",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "fee": "USDT",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 47,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_EUR",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 49,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_KAU",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 51,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_KAG",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 52,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KVT_USD1",
+    "base": {
+      "code": "KVT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 54,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0
+  },
+  {
+    "id": "LTC_GBP",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 56,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_EUR",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 57,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_KAU",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 59,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_KAG",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 60,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_GBP",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 65,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_EUR",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 66,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_GBP",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 67,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_KAU",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 68,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_KAG",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 69,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_EUR",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 70,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_GBP",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 71,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_KAU",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 72,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_KAG",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 73,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_AUD",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 78,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_AUD",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 79,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_AUD",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 80,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_AUD",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 81,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_AUD",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 82,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_AUD",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 83,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_AUD",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 84,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_AUD",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 85,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_CAD",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 87,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_CAD",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 88,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_CAD",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 89,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_CAD",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 90,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_CAD",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 91,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_CAD",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 92,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_CAD",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 93,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_CAD",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 94,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_SGD",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 96,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_SGD",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 97,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_SGD",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 98,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_SGD",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 99,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_SGD",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 100,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_SGD",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 101,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_SGD",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 102,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_SGD",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 103,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_CHF",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 105,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_CHF",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 106,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_CHF",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 107,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_CHF",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 108,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_CHF",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 109,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_CHF",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 110,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_CHF",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 111,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_CHF",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 112,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_AED",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 114,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_AED",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 115,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_AED",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 116,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_AED",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 117,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "LTC_AED",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 118,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BCH_AED",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 119,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "DASH_AED",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 120,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XRP_AED",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 121,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_EUR",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 123,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_GBP",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 124,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_AUD",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 125,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_CAD",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 126,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_SGD",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 127,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_CHF",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 128,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_AED",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 129,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_KAU",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 130,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XLM_KAG",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 131,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_EUR",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 132,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_GBP",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 133,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_AUD",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 134,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_CAD",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 135,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_SGD",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "SGD",
+      "type": "fiat"
+    },
+    "fee": "SGD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 136,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_CHF",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 137,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_AED",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AED",
+      "type": "fiat"
+    },
+    "fee": "AED",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 138,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_KAU",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 139,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "XDC_KAG",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 140,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_EUR",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "EUR",
+      "type": "fiat"
+    },
+    "fee": "EUR",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 141,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_GBP",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "GBP",
+      "type": "fiat"
+    },
+    "fee": "GBP",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 142,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_AUD",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "AUD",
+      "type": "fiat"
+    },
+    "fee": "AUD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 143,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_CAD",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CAD",
+      "type": "fiat"
+    },
+    "fee": "CAD",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 144,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "USDC_CHF",
+    "base": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "CHF",
+      "type": "fiat"
+    },
+    "fee": "CHF",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 145,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_USDC",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 146,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAG_USDC",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 147,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "BTC_USDC",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "fee": "USDC",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 148,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "ETH_USDC",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "fee": "USDC",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 149,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.2
+  },
+  {
+    "id": "KAU_USD1",
+    "base": {
+      "code": "KAU",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "KAU",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 157,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "KAG_USD1",
+    "base": {
+      "code": "KAG",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "KAG",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 158,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "USD1_USDC",
+    "base": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDC",
+      "type": "crypto"
+    },
+    "fee": "USDC",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 159,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "USD1_USDT",
+    "base": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USDT",
+      "type": "crypto"
+    },
+    "fee": "USDT",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 160,
+    "baseDecimals": 7,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "BTC_USD1",
+    "base": {
+      "code": "BTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 184,
+    "baseDecimals": 8,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ETH_USD1",
+    "base": {
+      "code": "ETH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 185,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "XRP_USD1",
+    "base": {
+      "code": "XRP",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 186,
+    "baseDecimals": 6,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ADA_USD1",
+    "base": {
+      "code": "ADA",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 187,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "LTC_USD1",
+    "base": {
+      "code": "LTC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 188,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "XLM_USD1",
+    "base": {
+      "code": "XLM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 189,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "XDC_USD1",
+    "base": {
+      "code": "XDC",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 190,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "AVAX_USD1",
+    "base": {
+      "code": "AVAX",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 192,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "DOGE_USD1",
+    "base": {
+      "code": "DOGE",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 193,
+    "baseDecimals": 1,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "LINK_USD1",
+    "base": {
+      "code": "LINK",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 195,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "UNI_USD1",
+    "base": {
+      "code": "UNI",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 197,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ATOM_USD1",
+    "base": {
+      "code": "ATOM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 198,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "TRX_USD1",
+    "base": {
+      "code": "TRX",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 199,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "DAI_USD1",
+    "base": {
+      "code": "DAI",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 204,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ALGO_USD1",
+    "base": {
+      "code": "ALGO",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 205,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "MKR_USD1",
+    "base": {
+      "code": "MKR",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 206,
+    "baseDecimals": 4,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "HBAR_USD1",
+    "base": {
+      "code": "HBAR",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 207,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "QNT_USD1",
+    "base": {
+      "code": "QNT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 208,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "AAVE_USD1",
+    "base": {
+      "code": "AAVE",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 209,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "YFI_USD1",
+    "base": {
+      "code": "YFI",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 210,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ZRX_USD1",
+    "base": {
+      "code": "ZRX",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 211,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "BAT_USD1",
+    "base": {
+      "code": "BAT",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 212,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ARB_USD1",
+    "base": {
+      "code": "ARB",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 214,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "GALA_USD1",
+    "base": {
+      "code": "GALA",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 215,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "LDO_USD1",
+    "base": {
+      "code": "LDO",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 216,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "IMX_USD1",
+    "base": {
+      "code": "IMX",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 217,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "OM_USD1",
+    "base": {
+      "code": "OM",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 218,
+    "baseDecimals": 1,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "POL_USD1",
+    "base": {
+      "code": "POL",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 220,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "1INCH_USD1",
+    "base": {
+      "code": "1INCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 255,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "ANKR_USD1",
+    "base": {
+      "code": "ANKR",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 256,
+    "baseDecimals": 1,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "FET_USD1",
+    "base": {
+      "code": "FET",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 257,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "INJ_USD1",
+    "base": {
+      "code": "INJ",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 258,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "SEI_USD1",
+    "base": {
+      "code": "SEI",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 259,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "BCH_USD1",
+    "base": {
+      "code": "BCH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 260,
+    "baseDecimals": 5,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "DASH_USD1",
+    "base": {
+      "code": "DASH",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 261,
+    "baseDecimals": 3,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  },
+  {
+    "id": "S_USD1",
+    "base": {
+      "code": "S",
+      "type": "crypto"
+    },
+    "quote": {
+      "code": "USD1",
+      "type": "crypto"
+    },
+    "fee": "USD1",
+    "canBuy": true,
+    "canSell": true,
+    "sortOrder": 262,
+    "baseDecimals": 2,
+    "quoteDecimals": 7,
+    "orderRange": 0.5
+  }
+]

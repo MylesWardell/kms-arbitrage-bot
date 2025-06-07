@@ -1,3 +1,5 @@
+import { type Decimal } from "decimal.js";
+
 export interface ExchangePairResponse {
   currencyPairId: SymbolId;
   baseCurrency: CurrencyCode;
@@ -30,6 +32,7 @@ export interface Depth {
 }
 
 export interface OrderBook {
+  symbolId: SymbolId;
   bid: Depth[];
   ask: Depth[];
 }
@@ -39,63 +42,76 @@ export interface DepthResponse {
   depthItems: OrderBook;
 }
 
-export type Balance = Record<CurrencyCode, BalanceValue>
+export type Balance = Record<CurrencyCode, BalanceValue>;
 
 export type BalanceValue = {
   available: number;
   allocatedOnExchange: number;
+};
+
+export interface Edge {
+  fromCurrency: CurrencyCode;
+  toCurrency: CurrencyCode;
+  rate: Decimal;
+  weight: Decimal;
+  type: 'buy' | 'sell';
 }
 
-export type SymbolId = `${CurrencyCode}_${CurrencyCode}`
+export interface Graph {
+  vertices: Set<string>;
+  edges: Edge[];
+}
+
+export type SymbolId = `${CurrencyCode}_${CurrencyCode}`;
 
 export type CurrencyCode =
-  "KAU" | 
-  "KAG" | 
-  "USDT" | 
-  "ADA" | 
-  "USDC" | 
-  "BTC" | 
-  "ETH" | 
-  "BCH" | 
-  "DASH" | 
-  "XRP" | 
-  "LTC" | 
-  "AVAX" | 
-  "DOGE" | 
-  "USD1" | 
-  "XDC" | 
-  "LINK" | 
-  "UNI" | 
-  "ATOM" | 
-  "TRX" | 
-  "DAI" | 
-  "ALGO" | 
-  "MKR" | 
-  "HBAR" | 
-  "QNT" | 
-  "AAVE" | 
-  "YFI" | 
-  "ZRX" | 
-  "BAT" | 
-  "ARB" | 
-  "GALA" | 
-  "LDO" | 
-  "IMX" | 
-  "XLM" | 
-  "OM" |
-  "KVT" | 
-  "POL" | 
-  "1INCH" | 
-  "ANKR" | 
-  "FET" | 
-  "INJ" | 
-  "SEI" | 
-  "S" |
-  "USD" | 
-  "CAD" | 
-  "CHF" | 
-  "EUR" | 
-  "GBP" | 
-  "AUD" | 
-  "SGD" | 
-  "AED"
+  | "KAU"
+  | "KAG"
+  | "USDT"
+  | "ADA"
+  | "USDC"
+  | "BTC"
+  | "ETH"
+  | "BCH"
+  | "DASH"
+  | "XRP"
+  | "LTC"
+  | "AVAX"
+  | "DOGE"
+  | "USD1"
+  | "XDC"
+  | "LINK"
+  | "UNI"
+  | "ATOM"
+  | "TRX"
+  | "DAI"
+  | "ALGO"
+  | "MKR"
+  | "HBAR"
+  | "QNT"
+  | "AAVE"
+  | "YFI"
+  | "ZRX"
+  | "BAT"
+  | "ARB"
+  | "GALA"
+  | "LDO"
+  | "IMX"
+  | "XLM"
+  | "OM"
+  | "KVT"
+  | "POL"
+  | "1INCH"
+  | "ANKR"
+  | "FET"
+  | "INJ"
+  | "SEI"
+  | "S"
+  | "USD"
+  | "CAD"
+  | "CHF"
+  | "EUR"
+  | "GBP"
+  | "AUD"
+  | "SGD"
+  | "AED";
