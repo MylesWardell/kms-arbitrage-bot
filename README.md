@@ -1,2 +1,2 @@
-# kms-mint-cycling
-An automated script for KMS mint cycling 
+# kms-arbitrage-bot
+An automated script implementing the bellman-ford shortest path algorithm
