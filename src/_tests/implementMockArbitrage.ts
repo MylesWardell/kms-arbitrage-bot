@@ -68,7 +68,7 @@ export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
     };
 
     saveOpportunity.set(["trade", cycleId, orderId, trade.path], trade);
-    console.log("arbitrage found with id", cycleId);
+    console.log("Arbitrage found with id", cycleId, 'with profit', new Decimal(tempBalance[toCurrency].available).minus(10).toNumber(), `on 10 ${cycleStart.fromCurrency}`);
     pay = receive;
   }
 
@@ -79,7 +79,7 @@ const mockArbitrageTrades = async () => {
   const opportunities = await detectArbitrageOpportunities();
 
   if (opportunities.length === 0) {
-    return console.log("No arbitrage opportunity detected.");
+    return console.debug("No arbitrage opportunity detected.");
   }
 
   for (const arbitrage of opportunities) {
