@@ -1,6 +1,6 @@
-import { CurrencyCode, Edge } from "../types.ts";
+import { ArbitrageOpportunity, CurrencyCode, Edge } from "../types.ts";
 import { getBestPrice } from "./getBestPrice.ts";
-import { getKv } from "../kvStore.ts";
+import { get } from "../kvStore.ts";
 import { Decimal } from "decimal.js";
 import { findNegativeCycles } from "./bellmanFordAlgorithm.ts";
 import { getQuoteBaseMap } from "../helpers/getQuoteBaseMap.ts";
@@ -58,18 +58,14 @@ export async function convertToExchangeRates(): Promise<Edge[]> {
 }
 
 export async function detectArbitrageOpportunities(): Promise<
-  Array<{
-    cycle: CurrencyCode[];
-    profit: Decimal;
-    cycleEdges: Edge[];
-  }>
+  Array<ArbitrageOpportunity>
 > {
   // Step 1: Convert market data to exchange rates
   const exchangeRates = await convertToExchangeRates();
 
   // Step 2: Create a graph
-  const baseCurrencies = await getKv<CurrencyCode[]>(["base-currencies"]);
-  const quoteCurrencies = await getKv<CurrencyCode[]>(["quote-currencies"]);
+  const baseCurrencies = await get<CurrencyCode[]>(["base-currencies"]);
+  const quoteCurrencies = await get<CurrencyCode[]>(["quote-currencies"]);
   const currencies = new Set([...baseCurrencies, ...quoteCurrencies]);
 
   // Step 3: Use Bellman-Ford algorithm to find arbitrage opportunities

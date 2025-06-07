@@ -1,8 +1,9 @@
 import { sleep } from "https://deno.land/x/sleep@v1.3.0/sleep.ts";
 import { getBalanceQuery, getExchangeDepthBySymbolQuery, getExchangePairsQuery } from "../helpers/kmsApiRequests.ts";
+import { getKv } from "../kvStore.ts";
 
 export const updateDepth = async () => {
-  const kv = await Deno.openKv("./kv.db");
+  const kv = await getKv();
   const currencies = await getExchangePairsQuery()
 
   for (const currency of currencies) {
@@ -21,7 +22,7 @@ export const updateDepth = async () => {
 }
 
 export const updateExchangePairs = async () => {
-  const kv = await Deno.openKv("./kv.db");
+  const kv = await getKv();
   const currencies = await getExchangePairsQuery()
   await kv.set(['all-currencies'], currencies)
 
@@ -37,12 +38,11 @@ export const updateExchangePairs = async () => {
     kv.set(['base-currencies'], Array.from(baseCurrencies)),
     kv.set(['quote-currencies'], Array.from(quoteCurrencies)),
   ])
-
   console.debug('Updated Kv for all currencies')
 }
 
 export const updateBalance = async () => {
-  const kv = await Deno.openKv("./kv.db");
+  const kv = await getKv();
   const balance = await getBalanceQuery()
   await kv.set(['balance'], balance)
   console.debug('Update balance')

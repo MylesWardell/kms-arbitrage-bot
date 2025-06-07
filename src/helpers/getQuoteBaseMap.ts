@@ -1,9 +1,10 @@
+import { getKv } from "../kvStore.ts";
 import {
   ExchangePairResponse,
 } from "../types.ts";
 
 export const getQuoteBaseMap = async () => {
-  const kv = await Deno.openKv("./kv.db");
+  const kv = await getKv();
   const currencies = await kv.get<ExchangePairResponse[]>(["all-currencies"]);
 
   if (!currencies.value) {

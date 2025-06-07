@@ -1,5 +1,5 @@
 import { Decimal } from "decimal.js";
-import { Graph, Edge, CurrencyCode } from "../types.ts";
+import { Graph, Edge, CurrencyCode, ArbitrageOpportunity } from "../types.ts";
 
 /**
  * Detects arbitrage opportunities using the Bellman-Ford algorithm
@@ -121,12 +121,8 @@ export function calculateArbitrageProfit(cycle: string[], edges: Edge[]): {profi
  * @param graph - Graph containing currencies and exchange rates
  * @returns Array of arbitrage cycles with their profit ratios
  */
-export function findNegativeCycles(graph: Graph): Array<{ 
-  cycle: CurrencyCode[], 
-  profit: Decimal,
-  cycleEdges: Edge[]
-}> {
-  const opportunities: Array<{ cycle: CurrencyCode[], profit: Decimal, cycleId: string, cycleEdges: Edge[] }> = [];
+export function findNegativeCycles(graph: Graph): Array<ArbitrageOpportunity> {
+  const opportunities: Array<ArbitrageOpportunity> = [];
   const processed = new Set<CurrencyCode>();
   
   // Try starting from each currency

@@ -1,6 +1,7 @@
 import { io } from "socket.io-client";
 import { getExchangePairsQuery } from "../helpers/kmsApiRequests.ts";
 import { SymbolId } from "../types.ts";
+import { getKv } from "../kvStore.ts";
 
 export interface Ticker {
   symbolId: SymbolId;
@@ -11,9 +12,15 @@ export interface Ticker {
 const baseUrl = "wss://apip.kinesis.money";
 const path = "/notifications/market-analytics/tickers";
 
-export const connectToDepthSocket = async () => {
+export const connectToPricingSocket = async () => {
   const currencies = await getExchangePairsQuery();
   const symbolIds = currencies.map((currency) => currency.currencyPairId);
+  const kv = await getKv();
+
+  kv.listenQueue(async (ticker: Ticker) => {
+    console.debug('Update price for', ticker.symbolId)
+    await kv.set(["price", ticker.symbolId], ticker);
+  });
 
   const socket = io(baseUrl, {
     path,
@@ -25,39 +32,34 @@ export const connectToDepthSocket = async () => {
   });
 
   socket.on("connect", () => {
-    console.log("Connected to depth socket");
+    console.debug("Connected to pricing socket");
     socket.emit("subscribeToTickers", { symbolIds });
   });
 
   socket.on(
     "tickerInit",
-    async (
-      tickers: Record<SymbolId, Ticker>,
-    ) => {
-      const kv = await Deno.openKv("./kv.db");
+    (tickers: Record<SymbolId, Ticker>) => {
+      try {
+        for (const ticker of Object.values(tickers)) {
+          kv.enqueue(ticker);
+        }
 
-      const atomic = kv.atomic();
-
-      for (const ticker of Object.values(tickers)) {
-        atomic.set(["price", ticker.symbolId], ticker);
+        console.debug("Ticker init committed");
+      } catch {
+        console.error("database locked");
       }
-
-      await atomic.commit();
-      console.log("Ticker init committed");
     },
   );
 
   socket.on(
     "tickerChange",
-    async (
-      ticker: Ticker,
-    ) => {
-      const kv = await Deno.openKv("./kv.db");
-
-      const atomic = kv.atomic();
-      atomic.set(["price", ticker.symbolId], ticker);
-      await atomic.commit();
-      console.log(`Ticker change committed for ${ticker.symbolId}`);
+    (ticker: Ticker) => {
+      try {
+        kv.enqueue(ticker);
+        console.debug(`Ticker change committed for ${ticker.symbolId}`);
+      } catch {
+        console.error("database locked");
+      }
     },
   );
 

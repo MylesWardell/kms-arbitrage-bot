@@ -1,6 +1,6 @@
 import { Decimal } from "decimal.js";
-import { CurrencyCode, OrderBook, SymbolId } from "../types.ts";
-import { getKvNull } from "../kvStore.ts";
+import { CurrencyCode, SymbolId } from "../types.ts";
+import { getNull } from "../kvStore.ts";
 import { calculatePrice } from "./depthCalculator.ts";
 import symbols from "../mock-data/symbols.json" with { type: "json" };
 import { Ticker } from "../update-kv/depth-socket.ts";
@@ -40,8 +40,8 @@ export const getBestPrice = async (
   const { from, to, pay } = params;
 
   const [real, inverse] = await Promise.all([
-    getKvNull<Ticker>(["price", `${to}_${from}`]),
-    getKvNull<Ticker>(["price", `${from}_${to}`]),
+    getNull<Ticker>(["price", `${to}_${from}`]),
+    getNull<Ticker>(["price", `${from}_${to}`]),
   ]);
 
   const depth = real ?? inverse;

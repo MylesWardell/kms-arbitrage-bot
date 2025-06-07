@@ -57,6 +57,13 @@ export interface Edge {
   type: 'buy' | 'sell';
 }
 
+export interface ArbitrageOpportunity {
+  cycleId: string;
+  cycle: CurrencyCode[];
+  profit: Decimal;
+  cycleEdges: Edge[];
+}
+
 export interface Graph {
   vertices: Set<string>;
   edges: Edge[];

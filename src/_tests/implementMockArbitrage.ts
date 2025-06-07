@@ -1,16 +1,19 @@
-import { Balance, CurrencyCode, Edge } from "../types.ts";
+import { ArbitrageOpportunity, Balance } from "../types.ts";
 import mockBalance from "../mock-data/mock-balance.json" with { type: "json" };
 import { Decimal } from "decimal.js";
 import { getBestPrice } from "../arbitrage-calculations/getBestPrice.ts";
 import { detectArbitrageOpportunities } from "../arbitrage-calculations/index.ts";
+import { getKv } from "../kvStore.ts";
 
-export const testArbitrage = async (arbitrage: {
-  cycle: CurrencyCode[];
-  profit: Decimal;
-  cycleEdges: Edge[];
-}) => {
-  const { cycleEdges } = arbitrage;
+export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
+  const { cycleEdges, cycleId } = arbitrage;
   const cycleStart = cycleEdges[0];
+  const kv = await getKv();
+
+  const saveOpportunity = kv.atomic().set(
+    ["opportunity", cycleId],
+    JSON.stringify(arbitrage, null, 2),
+  );
 
   const tempBalance = {
     ...mockBalance,
@@ -42,7 +45,8 @@ export const testArbitrage = async (arbitrage: {
       allocatedOnExchange: 0,
     };
 
-    console.log({
+    const trade = {
+      timestamp: Date.now(),
       type,
       path: `${fromCurrency} -> ${toCurrency}`,
       price: price.toString(),
@@ -60,10 +64,14 @@ export const testArbitrage = async (arbitrage: {
         [fromCurrency]: tempBalance[fromCurrency].available,
         [toCurrency]: tempBalance[toCurrency].available,
       },
-    });
+    };
 
+    saveOpportunity.set(["trade", cycleId, trade.path], trade);
+    console.log("arbitrage found with id", cycleId);
     pay = receive;
   }
+
+  await saveOpportunity.commit();
 };
 
 const mockArbitrageTrades = async () => {
@@ -74,7 +82,7 @@ const mockArbitrageTrades = async () => {
   }
 
   for (const arbitrage of opportunities) {
-    await testArbitrage(arbitrage)
+    await testArbitrage(arbitrage);
   }
 };
 
