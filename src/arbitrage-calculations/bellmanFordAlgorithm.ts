@@ -104,7 +104,6 @@ export function calculateArbitrageProfit(cycle: string[], edges: Edge[]): {profi
     // Find the exchange rate for this currency pair
     const edge = edges.find(e => e.fromCurrency === from && e.toCurrency === to);
 
-    
     if (!edge) {
       throw new Error(`No exchange rate found from ${from} to ${to}`);
     }

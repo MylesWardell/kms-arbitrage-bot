@@ -9,9 +9,10 @@ export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
   const { cycleEdges, cycleId } = arbitrage;
   const cycleStart = cycleEdges[0];
   const kv = await getKv();
+  const orderId = crypto.randomUUID()
 
   const saveOpportunity = kv.atomic().set(
-    ["opportunity", cycleId],
+    ["opportunity", cycleId, orderId],
     JSON.stringify(arbitrage, null, 2),
   );
 
@@ -66,7 +67,7 @@ export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
       },
     };
 
-    saveOpportunity.set(["trade", cycleId, trade.path], trade);
+    saveOpportunity.set(["trade", cycleId, orderId, trade.path], trade);
     console.log("arbitrage found with id", cycleId);
     pay = receive;
   }
