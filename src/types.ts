@@ -55,6 +55,7 @@ export interface Edge {
   rate: Decimal;
   weight: Decimal;
   type: 'buy' | 'sell';
+  exchange: 'kms' | 'swyftx';
 }
 
 export interface ArbitrageOpportunity {

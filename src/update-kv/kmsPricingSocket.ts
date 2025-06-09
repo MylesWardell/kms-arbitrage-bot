@@ -7,20 +7,16 @@ export interface Ticker {
   symbolId: SymbolId;
   bidPrice: number;
   askPrice: number;
+  exchange: "kms" | "swyftx";
 }
 
 const baseUrl = "wss://apip.kinesis.money";
 const path = "/notifications/market-analytics/tickers";
 
-export const connectToPricingSocket = async () => {
+export const connectToKmsPricingSocket = async () => {
   const currencies = await getExchangePairsQuery();
   const symbolIds = currencies.map((currency) => currency.currencyPairId);
   const kv = await getKv();
-
-  kv.listenQueue(async (ticker: Ticker) => {
-    console.debug('Update price for', ticker.symbolId)
-    await kv.set(["price", ticker.symbolId], ticker);
-  });
 
   const socket = io(baseUrl, {
     path,
@@ -38,10 +34,11 @@ export const connectToPricingSocket = async () => {
 
   socket.on(
     "tickerInit",
-    (tickers: Record<SymbolId, Ticker>) => {
+    (tickers: Record<SymbolId, Omit<Ticker, "exchange">>) => {
       try {
         for (const ticker of Object.values(tickers)) {
-          kv.enqueue(ticker);
+          const { askPrice, bidPrice, symbolId } = ticker;
+          kv.enqueue({ symbolId, askPrice, bidPrice, exchange: "kms" });
         }
 
         console.debug("Ticker init committed");
@@ -53,9 +50,10 @@ export const connectToPricingSocket = async () => {
 
   socket.on(
     "tickerChange",
-    (ticker: Ticker) => {
+    (ticker: Omit<Ticker, "exchange">) => {
       try {
-        kv.enqueue(ticker);
+        const { askPrice, bidPrice, symbolId } = ticker;
+        kv.enqueue({ symbolId, askPrice, bidPrice, exchange: "kms" });
         console.debug(`Ticker change committed for ${ticker.symbolId}`);
       } catch {
         console.error("database locked");

@@ -9,7 +9,7 @@ export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
   const { cycleEdges, cycleId } = arbitrage;
   const cycleStart = cycleEdges[0];
   const kv = await getKv();
-  const orderId = crypto.randomUUID()
+  const orderId = Date.now()
 
   const saveOpportunity = kv.atomic().set(
     ["opportunity", cycleId, orderId],
@@ -56,6 +56,7 @@ export const testArbitrage = async (arbitrage: ArbitrageOpportunity) => {
         price: price.toString(),
         total: total.toString(),
         symbolId: `${fromCurrency}_${toCurrency}`,
+        exchange: edge.exchange,
       },
       other: {
         pay: `${pay.toString()} ${fromCurrency}`,

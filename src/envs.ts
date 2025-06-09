@@ -3,8 +3,10 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    KMS_API_SECRET_KEY: z.string().min(1),
-    KMS_API_PUBLIC_KEY: z.string().min(1),
+    KMS_API_SECRET_KEY: z.string().optional(),
+    KMS_API_PUBLIC_KEY: z.string().optional(),
+    SWYFTX_API_SECRET_KEY: z.string().optional(),
+    SWYFTX_API_ACCESS_TOKEN: z.string().optional(),
   },
   runtimeEnv: Deno.env.toObject(),
 });

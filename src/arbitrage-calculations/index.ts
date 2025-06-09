@@ -38,6 +38,7 @@ export async function convertToExchangeRates(): Promise<Edge[]> {
         fromCurrency: baseCurrency as CurrencyCode,
         toCurrency: quoteCurrency as CurrencyCode,
         rate: bestPrice.price,
+        exchange: bestPrice.exchange,
 
         weight: bestPrice.rateAdjusted.ln().neg(),
         type: bestPrice.type,
@@ -47,7 +48,7 @@ export async function convertToExchangeRates(): Promise<Edge[]> {
         fromCurrency: quoteCurrency as CurrencyCode,
         toCurrency: baseCurrency as CurrencyCode,
         rate: bestPriceInverse.price,
-
+        exchange: bestPriceInverse.exchange,
         weight: bestPriceInverse.rateAdjusted.ln().neg(),
         type: bestPriceInverse.type,
       });
